@@ -1,0 +1,27 @@
+using System;
+
+namespace project3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double[] list = new double[5] { 45, 21, 0, 2, 0 };
+            double sum = 0;
+            foreach(var item in list)
+            {
+                sum += item;                
+            }
+            var mid = sum / list.Length;
+            for(int i = 0; i <list.Length;i++)
+            {
+                if (list[i] == 0)
+                {
+                    list[i] = mid;
+                }
+                Console.Write(list[i]+" ");
+            }
+            
+        }
+    }
+}
